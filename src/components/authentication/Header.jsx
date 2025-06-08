@@ -3,9 +3,11 @@ import { Link, useNavigate } from 'react-router-dom'
 
 const Header = () => {
     const token = localStorage.getItem("platzi-token");
+    const authtoken = localStorage.getItem("auth-token");
     const navigate = useNavigate();
      const  logOutUser = () => {
       localStorage.removeItem("platzi-token");
+      localStorage.removeItem("auth-token");
       navigate("/")
 
    }
@@ -15,7 +17,7 @@ const Header = () => {
         <Link to="/home" className='hover:border-b-2 hover:border-b-red-500'>Home</Link>
         <Link to="/profile" className='hover:border-b-2 hover:border-b-red-500'>Profile</Link>
         {
-              token  ? 
+              authtoken  ? 
             <Link to="/" onClick={logOutUser} className=' bg-red-500 text-white px-2 py-1 rounded-lg'>Logout</Link>: 
             <Link to="/" className='hover:border-b-2 hover:border-b-red-500'>Login</Link>
 
