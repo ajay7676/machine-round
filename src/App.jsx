@@ -20,6 +20,8 @@ import Header from "./components/authentication/Header"
 import Home from "./components/authentication/Home";
 import AuthProfile from "./components/auth/AuthProfile";
 import AppLayout from "./components/auth/AppLayout";
+import FormValidation from "./components/form-contextapi/FormValidation";
+import { FormValidationProvider } from "./components/form-contextapi/context/FormValidationProvider";
 
 function App() {
   return (
@@ -55,7 +57,7 @@ function App() {
          {/* <ProductComponent /> */}
        {/* End Product Component */}
        {/* Start Autjhentication Component */}
-        <Router >
+        {/* <Router >
           <Routes>
             <Route path="/" element={<AuthenticationCom />} />
               <Route element={<AppLayout />}>
@@ -63,8 +65,13 @@ function App() {
                 <Route path="/profile" element={<AuthProfile />} />
             </Route>
           </Routes>
-        </Router>
+        </Router> */}
        {/* End Authentication Component */}
+       {/* Start Form Validation using Context API */} 
+       <FormValidationProvider>
+          <FormValidation />
+       </FormValidationProvider>
+       {/* End Form Validation  using  Context API */}
     </>
   );
 }
