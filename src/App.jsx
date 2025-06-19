@@ -22,6 +22,7 @@ import AuthProfile from "./components/auth/AuthProfile";
 import AppLayout from "./components/auth/AppLayout";
 import FormValidation from "./components/form-contextapi/FormValidation";
 import { FormValidationProvider } from "./components/form-contextapi/context/FormValidationProvider";
+import PostCrud from "./components/crud/PostCrud";
 
 function App() {
   return (
@@ -68,10 +69,13 @@ function App() {
         </Router> */}
        {/* End Authentication Component */}
        {/* Start Form Validation using Context API */} 
-       <FormValidationProvider>
+       {/* <FormValidationProvider>
           <FormValidation />
-       </FormValidationProvider>
+       </FormValidationProvider> */}
        {/* End Form Validation  using  Context API */}
+       {/* Start Post CRUD  */}
+        <PostCrud />
+       {/*End Post CRUD */}
     </>
   );
 }

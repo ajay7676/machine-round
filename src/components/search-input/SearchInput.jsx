@@ -12,7 +12,7 @@ const SearchInput = () => {
         setResults(cache[inputValue]);
         return;
     }
-  const data = await fetch("https://dummyjson.com/recipes/search?q=" +inputValue);
+  const data = await fetch("https://dummyjson.com/recipes/search?q="+inputValue);
     const response = await data.json();
     console.log(response);
     setResults(response.recipes);
