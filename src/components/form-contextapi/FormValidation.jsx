@@ -16,12 +16,6 @@ const FormValidation = () => {
     const handleSubmit =  () =>{
 
     }
-    const handleChange =(name , value) =>{
-
-    }
-     const handleBlur = (name) =>{
-
-     }
   return (
     <>
      <form onSubmit={handleSubmit} className='w-full max-w-[90%] mx-auto'>

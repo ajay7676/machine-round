@@ -17,10 +17,8 @@ const PaginationCom = () => {
     //    console.log("Ddf" , error)
 
     // }
-    console.log("Akaau");
     const data = await fetch("https://dummyjson.com/products?limit=500");
     const response = await data.json();
-    console.log(response.products);
     setProducts(response.products);
   };
   useEffect(() => {

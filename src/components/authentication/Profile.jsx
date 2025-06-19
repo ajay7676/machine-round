@@ -29,8 +29,6 @@ const Profile = () => {
   useEffect(() => {
     getUserProfile();
   }, []);
-
-  console.log(profileData);
   const { email, updatedAt, password, name, role, avatar } = profileData;
   const date = new Date(updatedAt);
   const day = date.getDate();

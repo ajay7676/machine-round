@@ -7,8 +7,6 @@ const ProductComponent = () => {
      const dispatch = useDispatch();
      const {products , loading , error} = useSelector(store => store?.products);
 
-     console.log(error)
-
      useEffect(() => {
 
         dispatch(fetchProducts())

@@ -8,7 +8,6 @@ export const  fetchAuthor = createAsyncThunk("auth/fetchAuthor" , async({usernam
             username ,
             password
          })
-         console.log(response.data);
          return response.data
 
       }catch (error){
@@ -39,13 +38,10 @@ const authSlice = createSlice({
       },
       extraReducers: (builder) => {
         builder.addCase(fetchAuthor.pending , (state) => {
-             console.log("1")
-             
               state.loading = true;
               state.error = null;
         })
         .addCase(fetchAuthor.fulfilled, (state , action) => {
-                console.log("2")
                state.loading = false;
                state.token = action.payload.token;
                state.user = {usrname : action.meta.arg.username}
@@ -53,7 +49,6 @@ const authSlice = createSlice({
 
         })
         .addCase(fetchAuthor.rejected , (state , action) => {
-             console.log("3")
             state.loading = true;
             state.error = action.payload
         })

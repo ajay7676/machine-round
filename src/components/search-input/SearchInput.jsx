@@ -14,7 +14,6 @@ const SearchInput = () => {
     }
   const data = await fetch("https://dummyjson.com/recipes/search?q="+inputValue);
     const response = await data.json();
-    console.log(response);
     setResults(response.recipes);
     setCache((prev) => [{...prev, [inputValue]: response?.recipes}])
   };

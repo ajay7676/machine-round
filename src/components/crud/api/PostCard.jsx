@@ -19,7 +19,6 @@ const PostCard = ({post ,posts ,setPosts ,updateInutValue,setupdateInutValue}) =
 
      }
       const updateData = (post) => {
-        console.log("Edit btn clickkk")
         setupdateInutValue(post)
       }
   return (

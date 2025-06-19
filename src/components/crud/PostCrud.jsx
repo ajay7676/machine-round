@@ -26,7 +26,6 @@ const PostCrud = () => {
       getPostData(); 
    } , [])
    
-    console.log(updateInutValue)
   return (
     <>
       <div className="main-section">

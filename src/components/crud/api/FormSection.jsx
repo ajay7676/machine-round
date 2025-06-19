@@ -36,13 +36,9 @@ const FormSection = ({posts , setPosts ,updateInutValue ,setupdateInutValue}) =>
     // Edit Post Functinalites
     const editPost = async(id ,post) =>{
        try {
-          const res = await updatePost(id ,post);
-           console.log(res.data.id)
-           
+          const res = await updatePost(id ,post);           
             setPosts((prev) => {
-                console.log("PREV" , prev)
                 return prev.map((currElem) => {
-                     console.log("currElement" , currElem)
                     return currElem.id === id ? res.post : currElem
                 });
             })
