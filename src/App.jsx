@@ -32,6 +32,7 @@ import UsecallbaackCom from "./components/use-callback/UsecallbaackCom";
 import UserReducerComp from "./components/use-reducer/UserReducerComp";
 import UseContextComp from "./components/use-context/UseContextComp";
 import UserContextProvider from "./components/use-context/UserContextProvider";
+import TanstackTable from "./components/table/tanstack-eight/TanstackTable";
 
 function App() {
   return (
@@ -102,10 +103,14 @@ function App() {
          {/* <UserReducerComp /> */}
        {/* End UseMemo Component */}
        {/* Start UseMemo Component */}
-         <UserContextProvider>
+         {/* <UserContextProvider>
              <UseContextComp />
-         </UserContextProvider>
+         </UserContextProvider> */}
        {/* End UseMemo Component */}
+       {/* Start Tanstack V8 Component */}
+        <TanstackTable />
+       {/* End Tanstack V8 Component */}
+
     </>
   );
 }
