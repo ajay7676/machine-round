@@ -25,21 +25,20 @@ const FormSection = ({posts , setPosts ,updateInutValue ,setupdateInutValue}) =>
          }
     }
     useEffect(() => {
-        updateInutValue && (
             setFormData({
                 title: updateInutValue.title || "",
                 body: updateInutValue.body || "",
             })
-        )
+        
     }, [updateInutValue]);
 
     // Edit Post Functinalites
     const editPost = async(id ,post) =>{
        try {
-          const res = await updatePost(id ,post);           
+          const res = await updatePost(id ,post);
             setPosts((prev) => {
                 return prev.map((currElem) => {
-                    return currElem.id === id ? res.post : currElem
+                    return currElem.id === res.data.id ? res.data : currElem
                 });
             })
        } catch (error) {

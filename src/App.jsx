@@ -23,6 +23,15 @@ import AppLayout from "./components/auth/AppLayout";
 import FormValidation from "./components/form-contextapi/FormValidation";
 import { FormValidationProvider } from "./components/form-contextapi/context/FormValidationProvider";
 import PostCrud from "./components/crud/PostCrud";
+// import HOCComponent from "./components/hoc/withCounter";
+import ClickCounter from "./components/hoc/ClickCounter";
+import HoverCount from "./components/hoc/HoverCount";
+import InfiniteScrollbar from "./components/scroll-bar/InfiniteScrollbar";
+import UsememoComponent from "./components/use-memo/UsememoComponent";
+import UsecallbaackCom from "./components/use-callback/UsecallbaackCom";
+import UserReducerComp from "./components/use-reducer/UserReducerComp";
+import UseContextComp from "./components/use-context/UseContextComp";
+import UserContextProvider from "./components/use-context/UserContextProvider";
 
 function App() {
   return (
@@ -74,8 +83,29 @@ function App() {
        </FormValidationProvider> */}
        {/* End Form Validation  using  Context API */}
        {/* Start Post CRUD  */}
-        <PostCrud />
+        {/* <PostCrud /> */}
        {/*End Post CRUD */}
+       {/* Start Infinite Scroll Bar */}
+        {/* <InfiniteScrollbar /> */}
+       {/* End Infinite Scroll Bar */}
+       {/* Start HOC Function */}
+        {/* <ClickCounter />
+        <HoverCount /> */}
+       {/* End HOC Function */}
+       {/* Start UseMemo Component */}
+         {/* <UsememoComponent /> */}
+       {/* End UseMemo Component */}
+       {/* Start UseMemo Component */}
+         {/* <UsecallbaackCom /> */}
+       {/* End UseMemo Component */}
+       {/* Start UseMemo Component */}
+         {/* <UserReducerComp /> */}
+       {/* End UseMemo Component */}
+       {/* Start UseMemo Component */}
+         <UserContextProvider>
+             <UseContextComp />
+         </UserContextProvider>
+       {/* End UseMemo Component */}
     </>
   );
 }

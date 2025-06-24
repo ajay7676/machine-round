@@ -17,6 +17,6 @@ import axios from 'axios'
  export  const createPost = (post) => {
       return api.post('/posts' , post)
  }
- export  const updatePost = (id) => {
-      return api.put(`/posts/${id}`)
+ export  const updatePost = (id, post) => {
+      return api.put(`/posts/${id}` ,post)
  }

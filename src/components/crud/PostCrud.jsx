@@ -35,7 +35,7 @@ const PostCrud = () => {
             {
                posts && (
                 posts.map((post) => (
-                  <PostCard key={post.id} post={post} posts={posts} setPosts={setPosts} updateInutValue={updateInutValue} setupdateInutValue={setupdateInutValue}/>
+                  <PostCard key={post.id} id={post.id} post={post} posts={posts} setPosts={setPosts} updateInutValue={updateInutValue} setupdateInutValue={setupdateInutValue}/>
                 ))
                )
             }
