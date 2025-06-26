@@ -33,6 +33,7 @@ import UserReducerComp from "./components/use-reducer/UserReducerComp";
 import UseContextComp from "./components/use-context/UseContextComp";
 import UserContextProvider from "./components/use-context/UserContextProvider";
 import TanstackTable from "./components/table/tanstack-eight/TanstackTable";
+import LiftingStateUp from "./components/-Lifting-state-up/LiftingStateUp";
 
 function App() {
   return (
@@ -108,8 +109,11 @@ function App() {
          </UserContextProvider> */}
        {/* End UseMemo Component */}
        {/* Start Tanstack V8 Component */}
-        <TanstackTable />
+        {/* <TanstackTable /> */}
        {/* End Tanstack V8 Component */}
+       {/* Start Lifting State Up Compontent */}
+        <LiftingStateUp />
+       {/* End Lifting State Up Component */}
 
     </>
   );
