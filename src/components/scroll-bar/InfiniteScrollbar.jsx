@@ -8,7 +8,7 @@ const InfiniteScrollbar = () => {
   const fetchPostData = async () => {
     
     const respose = await fetch(
-      `https://jsonplaceholder.typicode.com/posts?_limit=96_page=${page}`
+      `https://jsonplaceholder.typicode.com/posts?_limit=9_page=${page}`
     );
     const data = await respose.json();
      setPosts((prev) => [...prev , ...data])

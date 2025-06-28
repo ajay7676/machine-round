@@ -36,6 +36,24 @@ button {
     -webkit-border-radius: 0.3rem;
     -moz-border-radius: 0.3rem;
 
+
+}
+button.bg-blue-600{
+     background-color: blueviolet;
+}
+button.bg-blue-600:hover{
+      background-color: blueviolet;
+     opacity: 80%;
+}
+button.bg-green-600{
+     background-color: green;
+}
+button.bg-blue-600:hover{
+      background-color: blueviolet;
+     opacity: 80%;
+}
+button.bg-red-600{
+     background-color: red;
 }
 
 button:hover {

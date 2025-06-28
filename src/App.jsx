@@ -14,26 +14,29 @@ import ProductComponent from "./components/products/ProductComponent";
 // import Header from "./components/authentication/Header";
 // import ProtectedRoute from "./components/authentication/ProtectedRoute";
 {/* End Authentication Component */}
-import AuthenticationCom from "./components/auth/AuthenticationCom";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/authentication/Header"
-import Home from "./components/authentication/Home";
-import AuthProfile from "./components/auth/AuthProfile";
-import AppLayout from "./components/auth/AppLayout";
-import FormValidation from "./components/form-contextapi/FormValidation";
-import { FormValidationProvider } from "./components/form-contextapi/context/FormValidationProvider";
+// import AuthenticationCom from "./components/auth/AuthenticationCom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Header from "./components/authentication/Header"
+// import Home from "./components/authentication/Home";
+// import AuthProfile from "./components/auth/AuthProfile";
+// import AppLayout from "./components/auth/AppLayout";
+// import FormValidation from "./components/form-contextapi/FormValidation";
+// import { FormValidationProvider } from "./components/form-contextapi/context/FormValidationProvider";
 import PostCrud from "./components/crud/PostCrud";
 // import HOCComponent from "./components/hoc/withCounter";
-import ClickCounter from "./components/hoc/ClickCounter";
-import HoverCount from "./components/hoc/HoverCount";
-import InfiniteScrollbar from "./components/scroll-bar/InfiniteScrollbar";
-import UsememoComponent from "./components/use-memo/UsememoComponent";
-import UsecallbaackCom from "./components/use-callback/UsecallbaackCom";
-import UserReducerComp from "./components/use-reducer/UserReducerComp";
-import UseContextComp from "./components/use-context/UseContextComp";
-import UserContextProvider from "./components/use-context/UserContextProvider";
-import TanstackTable from "./components/table/tanstack-eight/TanstackTable";
-import LiftingStateUp from "./components/-Lifting-state-up/LiftingStateUp";
+// import ClickCounter from "./components/hoc/ClickCounter";
+// import HoverCount from "./components/hoc/HoverCount";
+// import InfiniteScrollbar from "./components/scroll-bar/InfiniteScrollbar";
+// import UsememoComponent from "./components/use-memo/UsememoComponent";
+// import UsecallbaackCom from "./components/use-callback/UsecallbaackCom";
+// import UserReducerComp from "./components/use-reducer/UserReducerComp";
+// import UseContextComp from "./components/use-context/UseContextComp";
+// import UserContextProvider from "./components/use-context/UserContextProvider";
+// import TanstackTable from "./components/table/tanstack-eight/TanstackTable";
+// import LiftingStateUp from "./components/-Lifting-state-up/LiftingStateUp";
+// import ParentPureCom from './components/pure-com/ParentPureCom'
+// import TodosComponent from "./components/todos/TodosComponent";
+import CartApp from "./components/cart-app/CartApp";
 
 function App() {
   return (
@@ -112,8 +115,17 @@ function App() {
         {/* <TanstackTable /> */}
        {/* End Tanstack V8 Component */}
        {/* Start Lifting State Up Compontent */}
-        <LiftingStateUp />
+        {/* <LiftingStateUp /> */}
        {/* End Lifting State Up Component */}
+       {/* Start Pure Component */}
+         {/* <ParentPureCom /> */}
+       {/* End Pure Component */}
+       {/* Start todo Component */}
+        {/* <TodosComponent /> */}
+       {/* End todo Component */}
+       {/*  Start Cart App Component  */}
+        <CartApp />
+       {/* End Cart App Component */}
 
     </>
   );
