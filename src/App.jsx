@@ -42,6 +42,7 @@ import RefreshTokenAuth from "./components/auth-refresh/RefreshTokenAuth";
 import RefreshDashboard from "./components/auth-refresh/RefreshDashboard";
 import RefreshAppLayout from "./components/auth-refresh/RefreshRoute";
 import RefreshRoute from "./components/auth-refresh/RefreshRoute";
+import SortingTable from "./components/table/tanstack-eight/SortingTable";
 
 function App() {
   return (
@@ -117,7 +118,8 @@ function App() {
          </UserContextProvider> */}
        {/* End UseMemo Component */}
        {/* Start Tanstack V8 Component  */}
-         <TanstackTable /> 
+         {/* <TanstackTable />  */}
+         <SortingTable />
        {/* End Tanstack V8 Component */}
        {/* Start Lifting State Up Compontent */}
         {/* <LiftingStateUp /> */}

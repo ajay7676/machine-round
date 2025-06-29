@@ -1,16 +1,24 @@
-import React, { useMemo } from 'react'
-import {flexRender, useReactTable , getCoreRowModel} from '@tanstack/react-table'
+import React, { useMemo, useState } from 'react'
+import {flexRender, useReactTable , getCoreRowModel , getSortedRowModel} from '@tanstack/react-table'
 import { columnsDef , columnsDefWithGrouping } from './columnsDef'
 import dataJSON from '../../../data/data.json'
 
 
-const TanstackTable = () => {
+const SortingTable = () => {
     const finalData = useMemo(() => dataJSON,[]);
-    const finalColumnDef = useMemo(() => columnsDefWithGrouping,[]);
+    const finalColumnDef = useMemo(() => columnsDef,[]);
+    const [sorting, setSorting] = useState()
     const tableInstance = useReactTable({
         columns : finalColumnDef,
         data: finalData,
-        getCoreRowModel: getCoreRowModel()
+        getCoreRowModel: getCoreRowModel(),
+        getSortedRowModel : getSortedRowModel(),
+        state: {
+            sorting: sorting ,
+
+        },
+        onSortingChange: setSorting,
+
 
     })
   return (
@@ -22,7 +30,8 @@ const TanstackTable = () => {
                     return <tr key={headerElem.id} className='w-full'>
                         {
                             headerElem.headers.map((columElem) => {
-                                return  <th key={columElem.id} colSpan={columElem.colSpan} className='py-3 px-4 bg-green-800 border-r-1 border-gray-400  text-[#fff]'>
+                                return  <th key={columElem.id} colSpan={columElem.colSpan} onClick={columElem.column.getToggleSortingHandler()}
+                                className='py-3 px-4 bg-green-800 border-r-1 border-gray-400  text-[#fff]'>
                                 {
                                     columElem.isPlaceholder ?
                                      null :
@@ -30,10 +39,6 @@ const TanstackTable = () => {
                                         columElem.column.columnDef.header,
                                         columElem.getContext()
                                         )
-                                }
-                                // Code for up and down sorting
-                                {
-                                    {asc: "-UP" , desc :"-DOWN"} [columElem.column.getIsSorted() ?? null ]
                                 }
                             </th>
                             })
@@ -69,4 +74,4 @@ const TanstackTable = () => {
   )
 }
 
-export default TanstackTable
+export default SortingTable
