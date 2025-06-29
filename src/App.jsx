@@ -1,14 +1,14 @@
 import "./App.css";
-import PaginationCom from "./components/pagination/PaginationCom";
-import SearchInput from "./components/search-input/SearchInput";
-import Counter from "./components/two-counter/Counter";
-import BgChanger from "./components/bg-changer/BgChanger";
-import PasswordGenrator from "./components/password-genrator/PasswordGenrator";
-import TogglePassword from "./components/toggle-pass/TogglePassword";
-import ProductComponent from "./components/products/ProductComponent";
+// import PaginationCom from "./components/pagination/PaginationCom";
+// import SearchInput from "./components/search-input/SearchInput";
+// import Counter from "./components/two-counter/Counter";
+// import BgChanger from "./components/bg-changer/BgChanger";
+// import PasswordGenrator from "./components/password-genrator/PasswordGenrator";
+// import TogglePassword from "./components/toggle-pass/TogglePassword";
+// import ProductComponent from "./components/products/ProductComponent";
 {/* Start Authentication Component */}
 // import AuthAuthorization from "./components/authentication/AuthAuthorization";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Home from "./components/authentication/Home";
 // import Profile from "./components/authentication/Profile";
 // import Header from "./components/authentication/Header";
@@ -19,7 +19,7 @@ import ProductComponent from "./components/products/ProductComponent";
 // import Header from "./components/authentication/Header"
 // import Home from "./components/authentication/Home";
 // import AuthProfile from "./components/auth/AuthProfile";
-// import AppLayout from "./components/auth/AppLayout";
+import AppLayout from "./components/auth/AppLayout";
 // import FormValidation from "./components/form-contextapi/FormValidation";
 // import { FormValidationProvider } from "./components/form-contextapi/context/FormValidationProvider";
 import PostCrud from "./components/crud/PostCrud";
@@ -36,7 +36,12 @@ import PostCrud from "./components/crud/PostCrud";
 // import LiftingStateUp from "./components/-Lifting-state-up/LiftingStateUp";
 // import ParentPureCom from './components/pure-com/ParentPureCom'
 // import TodosComponent from "./components/todos/TodosComponent";
-import CartApp from "./components/cart-app/CartApp";
+// import CartApp from "./components/cart-app/CartApp";
+// import BlogComponent from "./components/blog/BlogComponent";
+import RefreshTokenAuth from "./components/auth-refresh/RefreshTokenAuth";
+import RefreshDashboard from "./components/auth-refresh/RefreshDashboard";
+import RefreshAppLayout from "./components/auth-refresh/RefreshRoute";
+import RefreshRoute from "./components/auth-refresh/RefreshRoute";
 
 function App() {
   return (
@@ -111,8 +116,8 @@ function App() {
              <UseContextComp />
          </UserContextProvider> */}
        {/* End UseMemo Component */}
-       {/* Start Tanstack V8 Component */}
-        {/* <TanstackTable /> */}
+       {/* Start Tanstack V8 Component  */}
+         <TanstackTable /> 
        {/* End Tanstack V8 Component */}
        {/* Start Lifting State Up Compontent */}
         {/* <LiftingStateUp /> */}
@@ -124,8 +129,18 @@ function App() {
         {/* <TodosComponent /> */}
        {/* End todo Component */}
        {/*  Start Cart App Component  */}
-        <CartApp />
+        {/* <CartApp /> */}
        {/* End Cart App Component */}
+        {/* <BlogComponent /> */}
+       {/* Start Blog Component */}
+       {/* Start Authentication Use JWT with refresh token */}
+        {/* <Router >
+          <Routes>
+            <Route path="/" element={<RefreshTokenAuth />} />
+            <Route path="/dashboard" element={<RefreshRoute><RefreshDashboard /></RefreshRoute>} />
+          </Routes>
+        </Router> */}
+       {/*End  Authentication Use JWT with refresh token */}
 
     </>
   );
