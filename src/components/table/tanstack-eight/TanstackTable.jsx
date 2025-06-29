@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react'
 import {flexRender, useReactTable , getCoreRowModel} from '@tanstack/react-table'
-import { columnsDef } from './columnsDef'
+import { columnsDef , columnsDefWithGrouping } from './columnsDef'
 import dataJSON from '../../../data/data.json'
 
 
 const TanstackTable = () => {
     const finalData = useMemo(() => dataJSON,[]);
-    const finalColumnDef = useMemo(() => columnsDef,[]);
+    const finalColumnDef = useMemo(() => columnsDefWithGrouping,[]);
     const tableInstance = useReactTable({
         columns : finalColumnDef,
         data: finalData,
@@ -22,11 +22,15 @@ const TanstackTable = () => {
                     return <tr key={headerElem.id} className='w-full'>
                         {
                             headerElem.headers.map((columElem) => {
-                                return  <th key={columElem.id} className='py-3 px-4 bg-green-800 border-r-1 border-gray-400  text-[#fff]'>
-                                {flexRender(
-                                columElem.column.columnDef.header,
-                                columElem.getContext()
-                                )}
+                                return  <th key={columElem.id} colSpan={columElem.colSpan} className='py-3 px-4 bg-green-800 border-r-1 border-gray-400  text-[#fff]'>
+                                {
+                                    columElem.isPlaceholder ?
+                                     null :
+                                     flexRender(
+                                        columElem.column.columnDef.header,
+                                        columElem.getContext()
+                                        )
+                                }
                             </th>
                             })
                         }

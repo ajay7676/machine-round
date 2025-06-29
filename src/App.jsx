@@ -32,7 +32,7 @@ import PostCrud from "./components/crud/PostCrud";
 // import UserReducerComp from "./components/use-reducer/UserReducerComp";
 // import UseContextComp from "./components/use-context/UseContextComp";
 // import UserContextProvider from "./components/use-context/UserContextProvider";
-// import TanstackTable from "./components/table/tanstack-eight/TanstackTable";
+import TanstackTable from "./components/table/tanstack-eight/TanstackTable";
 // import LiftingStateUp from "./components/-Lifting-state-up/LiftingStateUp";
 // import ParentPureCom from './components/pure-com/ParentPureCom'
 // import TodosComponent from "./components/todos/TodosComponent";
