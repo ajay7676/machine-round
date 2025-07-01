@@ -43,6 +43,7 @@ import RefreshDashboard from "./components/auth-refresh/RefreshDashboard";
 import RefreshAppLayout from "./components/auth-refresh/RefreshRoute";
 import RefreshRoute from "./components/auth-refresh/RefreshRoute";
 import SortingTable from "./components/table/tanstack-eight/SortingTable";
+import GlobalFilter from "./components/table/tanstack-eight/GlobalFilter";
 
 function App() {
   return (
@@ -119,7 +120,8 @@ function App() {
        {/* End UseMemo Component */}
        {/* Start Tanstack V8 Component  */}
          {/* <TanstackTable />  */}
-         <SortingTable />
+         {/* <SortingTable /> */}
+         <GlobalFilter />
        {/* End Tanstack V8 Component */}
        {/* Start Lifting State Up Compontent */}
         {/* <LiftingStateUp /> */}
