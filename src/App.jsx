@@ -44,6 +44,7 @@ import RefreshAppLayout from "./components/auth-refresh/RefreshRoute";
 import RefreshRoute from "./components/auth-refresh/RefreshRoute";
 import SortingTable from "./components/table/tanstack-eight/SortingTable";
 import GlobalFilter from "./components/table/tanstack-eight/GlobalFilter";
+import ToggleBtn from "./components/toggle/toggle-btn/ToggleBtn";
 
 function App() {
   return (
@@ -121,7 +122,7 @@ function App() {
        {/* Start Tanstack V8 Component  */}
          {/* <TanstackTable />  */}
          {/* <SortingTable /> */}
-         <GlobalFilter />
+         {/* <GlobalFilter /> */}
        {/* End Tanstack V8 Component */}
        {/* Start Lifting State Up Compontent */}
         {/* <LiftingStateUp /> */}
@@ -145,6 +146,9 @@ function App() {
           </Routes>
         </Router> */}
        {/*End  Authentication Use JWT with refresh token */}
+       {/*Start Toogle button with custom hook  */}
+          <ToggleBtn />
+       {/* End Toogle button with custom hook  */}
 
     </>
   );
