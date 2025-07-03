@@ -8,7 +8,7 @@ import "./App.css";
 // import ProductComponent from "./components/products/ProductComponent";
 {/* Start Authentication Component */}
 // import AuthAuthorization from "./components/authentication/AuthAuthorization";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 // import Home from "./components/authentication/Home";
 // import Profile from "./components/authentication/Profile";
 // import Header from "./components/authentication/Header";
@@ -45,6 +45,11 @@ import RefreshRoute from "./components/auth-refresh/RefreshRoute";
 import SortingTable from "./components/table/tanstack-eight/SortingTable";
 import GlobalFilter from "./components/table/tanstack-eight/GlobalFilter";
 import ToggleBtn from "./components/toggle/toggle-btn/ToggleBtn";
+import CrudJson from "./components/json-crud/CrudJson";
+import Contact from "./components/json-crud/Contact";
+import NotFound from "./components/json-crud/NotFound";
+import ProductList from "./components/json-crud/admin/products/ProductList";
+import Navbar from "./components/json-crud/Navbar";
 
 function App() {
   return (
@@ -147,8 +152,19 @@ function App() {
         </Router> */}
        {/*End  Authentication Use JWT with refresh token */}
        {/*Start Toogle button with custom hook  */}
-          <ToggleBtn />
+          {/* <ToggleBtn /> */}
        {/* End Toogle button with custom hook  */}
+       {/* Start CRUD operation json server data */}
+       <BrowserRouter>
+          <Navbar />
+         <Routes>
+           <Route path="/"  element={ <CrudJson />} />
+           <Route path="/contact"  element={ <Contact />} />
+           <Route path="/admin/products"  element={ <ProductList />} />
+           <Route path="*"  element={ <NotFound />} />
+         </Routes>
+       </BrowserRouter>
+       {/* End CRUD operation json server data */}
 
     </>
   );
