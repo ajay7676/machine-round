@@ -50,6 +50,7 @@ import Contact from "./components/json-crud/Contact";
 import NotFound from "./components/json-crud/NotFound";
 import ProductList from "./components/json-crud/admin/products/ProductList";
 import Navbar from "./components/json-crud/Navbar";
+import CreateProduct from "./components/json-crud/admin/products/CreateProduct";
 
 function App() {
   return (
@@ -161,6 +162,7 @@ function App() {
            <Route path="/"  element={ <CrudJson />} />
            <Route path="/contact"  element={ <Contact />} />
            <Route path="/admin/products"  element={ <ProductList />} />
+           <Route path="/admin/products/create"  element={ <CreateProduct />} />
            <Route path="*"  element={ <NotFound />} />
          </Routes>
        </BrowserRouter>

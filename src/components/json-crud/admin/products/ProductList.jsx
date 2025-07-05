@@ -7,10 +7,8 @@ const ProductList = () => {
 
     const fetchProducts =  async () => {
         try{
-            const  response = await fetch(`http://localhost:3000/products?_sort=id&_order=desc`);
-             console.log(response)
+            const  response = await fetch(`http://localhost:3000/products?_sort=id&_order=asc`);
               const data = await response.json();
-               console.log(data)
                setproductsList (data)
         } catch(error){
              console.log(error)
