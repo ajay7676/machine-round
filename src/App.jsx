@@ -53,6 +53,7 @@ import Navbar from "./components/json-crud/Navbar";
 import CreateProduct from "./components/json-crud/admin/products/CreateProduct";
 import CounterApp from "./components/react-10/counter/CounterApp";
 import TodoApp from "./components/react-10/todo/TodoApp";
+import ReactSagaComponent from "./components/react-saga/ReactSagaComponent";
 
 function App() {
   return (
@@ -173,6 +174,9 @@ function App() {
          {/* <CounterApp /> */}
          {/* <TodoApp /> */}
        {/* End react 10 projects */}
+       {/* Start React Saga */}
+          <ReactSagaComponent />
+       {/* End React Saga */}
        
 
     </>
