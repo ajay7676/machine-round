@@ -8,7 +8,7 @@ import "./App.css";
 // import ProductComponent from "./components/products/ProductComponent";
 {/* Start Authentication Component */}
 // import AuthAuthorization from "./components/authentication/AuthAuthorization";
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 // import Home from "./components/authentication/Home";
 // import Profile from "./components/authentication/Profile";
 // import Header from "./components/authentication/Header";
@@ -51,6 +51,8 @@ import NotFound from "./components/json-crud/NotFound";
 import ProductList from "./components/json-crud/admin/products/ProductList";
 import Navbar from "./components/json-crud/Navbar";
 import CreateProduct from "./components/json-crud/admin/products/CreateProduct";
+import CounterApp from "./components/react-10/counter/CounterApp";
+import TodoApp from "./components/react-10/todo/TodoApp";
 
 function App() {
   return (
@@ -156,7 +158,7 @@ function App() {
           {/* <ToggleBtn /> */}
        {/* End Toogle button with custom hook  */}
        {/* Start CRUD operation json server data */}
-       <BrowserRouter>
+       {/* <BrowserRouter>
           <Navbar />
          <Routes>
            <Route path="/"  element={ <CrudJson />} />
@@ -165,8 +167,13 @@ function App() {
            <Route path="/admin/products/create"  element={ <CreateProduct />} />
            <Route path="*"  element={ <NotFound />} />
          </Routes>
-       </BrowserRouter>
+       </BrowserRouter> */}
        {/* End CRUD operation json server data */}
+       {/* Start  react 10 projects */}
+         {/* <CounterApp /> */}
+         {/* <TodoApp /> */}
+       {/* End react 10 projects */}
+       
 
     </>
   );
