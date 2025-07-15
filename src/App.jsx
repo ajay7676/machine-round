@@ -1,6 +1,6 @@
 import "./App.css";
-// import PaginationCom from "./components/pagination/PaginationCom";
-// import SearchInput from "./components/search-input/SearchInput";
+import PaginationCom from "./components/pagination/PaginationCom";
+import SearchInput from "./components/search-input/SearchInput";
 // import Counter from "./components/two-counter/Counter";
 // import BgChanger from "./components/bg-changer/BgChanger";
 // import PasswordGenrator from "./components/password-genrator/PasswordGenrator";
@@ -54,6 +54,7 @@ import CreateProduct from "./components/json-crud/admin/products/CreateProduct";
 import CounterApp from "./components/react-10/counter/CounterApp";
 import TodoApp from "./components/react-10/todo/TodoApp";
 import ReactSagaComponent from "./components/react-saga/ReactSagaComponent";
+import PaginationComp from "./components/practice/PaginationComp";
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
 
       {/* Pagination Component */}
       {/* <PaginationCom /> */}
+       <PaginationComp />
 
       {/* Why you need hooks and project */}
       {/* <Counter /> */}
@@ -175,7 +177,7 @@ function App() {
          {/* <TodoApp /> */}
        {/* End react 10 projects */}
        {/* Start React Saga */}
-          <ReactSagaComponent />
+          {/* <ReactSagaComponent /> */}
        {/* End React Saga */}
        
 

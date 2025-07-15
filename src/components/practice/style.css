@@ -1,0 +1,28 @@
+.product-con{
+     display: grid;
+     grid-template-columns: repeat(3 ,1fr);
+     gap: 1.5rem;
+     width: 100%;
+     max-width: 80%;
+     margin: 0 auto;
+}
+.product{
+     background-color: #fff;
+     border-radius: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+
+ .product .img-con{
+      width: 120px;
+      height: 120px;
+        
+     }
+
+     .product .img-con img {
+         width: 100%;
+         height: auto;
+         object-fit:cover;
+     }
