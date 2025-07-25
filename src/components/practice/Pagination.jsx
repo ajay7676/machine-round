@@ -14,7 +14,7 @@ const Pagination = ({nopages,currentPage, gotoPreviousPage,gotoNextPage , handle
           ))
            }
         </ul>
-       <button disabled={currentPage === nopages - 1} className='text-gray-500' onClick={gotoNextPage}> <FaChevronRight /></button>
+       <button disabled={currentPage === nopages - 1} className='text-gray-500' onClick={gotoNextPage}> <FaChevronRight />  /</button>
     </div>
   )
 }

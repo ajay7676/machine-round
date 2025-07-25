@@ -37,7 +37,8 @@ const nopages = Math.ceil(totalproducts / perPage);
         </h1>
         <div className='product-con'>
            {
-            products && products.length > 0 ? <>
+            products && (
+               products.length > 0 ? <>
               {
                  products.slice(start , end).map((product) => (
 
@@ -48,6 +49,7 @@ const nopages = Math.ceil(totalproducts / perPage);
             </>
             : <h1 className='text-white'>No Product Found</h1>
 
+            )
            }
         </div>
         <div className="pagination-con">

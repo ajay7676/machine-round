@@ -64,7 +64,7 @@ function App() {
 
       {/* Pagination Component */}
       {/* <PaginationCom /> */}
-       <PaginationComp />
+       {/* <PaginationComp /> */}
 
       {/* Why you need hooks and project */}
       {/* <Counter /> */}
